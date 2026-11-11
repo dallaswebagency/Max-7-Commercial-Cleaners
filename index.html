@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Max 7 Cleaning &amp; Property Services | Commercial Cleaning Calgary</title>
+<meta name="description" content="Max 7 is a high quality professional cleaning and property services provider in Calgary. Commercial janitorial, condominium common areas, carpet, floor, parkade and property maintenance.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blue:#25A9E0; --blue-d:#1388BC; --ice:#E3F3FB;
+  --ink:#0D1A24; --ink-2:#14273A; --steel:#5E6F7D;
+  --concrete:#D1D3D4; --paper:#F2F3F1; --white:#fff;
+  --mono:'JetBrains Mono',ui-monospace,monospace;
+  --sans:'Archivo',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+html,body{overflow-x:clip}
+body{font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.55;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1240px,92vw);margin:0 auto}
+.mono{font-family:var(--mono);font-size:.74rem;letter-spacing:.14em;text-transform:uppercase}
+
+/* ---------- header ---------- */
+.top{background:var(--ink);color:var(--concrete);position:sticky;top:0;z-index:50;border-bottom:1px solid rgba(255,255,255,.07)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:84px;gap:24px}
+.logo img{height:66px;width:auto}
+.nav{display:flex;gap:30px;align-items:center}
+.nav a{font-weight:500;font-size:.95rem;color:#C9D2D9;position:relative;padding:6px 0}
+.nav a::after{content:"";position:absolute;left:0;bottom:0;height:2px;width:0;background:var(--blue);transition:width .25s}
+.nav a:hover{color:#fff}.nav a:hover::after{width:100%}
+.head-cta{display:flex;align-items:center;gap:18px}
+.tel{font-family:var(--mono);font-size:.9rem;color:#fff;display:flex;align-items:center;gap:8px}
+.tel svg{width:16px;height:16px;stroke:var(--blue)}
+.btn{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:.95rem;padding:15px 24px;border-radius:2px;transition:transform .2s,background .2s,color .2s}
+.btn-blue{background:var(--blue);color:#fff}
+.btn-blue:hover{background:#fff;color:var(--ink)}
+.btn-line{border:1.5px solid rgba(255,255,255,.35);color:#fff}
+.btn-line:hover{border-color:var(--blue);color:var(--blue)}
+.btn svg{width:18px;height:18px}
+.burger{display:none;background:none;border:0;color:#fff;cursor:pointer}
+.burger svg{width:28px;height:28px}
+
+/* ---------- hero ---------- */
+.hero{background:var(--ink);color:#fff;position:relative;overflow:hidden;padding:70px 0 0}
+.windows{position:absolute;right:-40px;top:0;bottom:0;width:58%;display:grid;grid-template-columns:repeat(14,1fr);gap:10px;padding:30px;opacity:.55;pointer-events:none;
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 35%);mask-image:linear-gradient(90deg,transparent,#000 35%)}
+.windows i{display:block;aspect-ratio:1/1.25;border:1px solid rgba(209,211,212,.13);transition:background 1.4s,border-color 1.4s}
+.windows i.on{background:rgba(37,169,224,.5);border-color:var(--blue)}
+.hero-grid{position:relative;display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);gap:40px;align-items:end}
+.hero-copy{padding-bottom:90px}
+.hero .eyebrow{color:var(--blue);display:flex;align-items:center;gap:12px;margin-bottom:28px}
+.hero .eyebrow::before{content:"";width:34px;height:2px;background:var(--blue)}
+.hero h1{font-size:clamp(3rem,7.4vw,6.6rem);line-height:.9;font-weight:800;font-stretch:72%;letter-spacing:-.01em;text-transform:uppercase}
+.hero h1 .wow{display:block;font-stretch:125%;font-weight:900;color:transparent;-webkit-text-stroke:3px var(--blue);letter-spacing:.02em;font-size:1.18em;margin-top:6px}
+.hero .lead{margin:28px 0 38px;font-size:1.2rem;color:#B9C6D0;max-width:470px}
+.hero .lead b{color:#fff;font-weight:600}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px}
+.hero-photo{position:relative;align-self:stretch;min-height:560px}
+.skyline{position:absolute;inset:0;clip-path:polygon(0 26%,20% 26%,20% 10%,47% 10%,47% 19%,61% 19%,61% 0,100% 0,100% 100%,0 100%);overflow:hidden}
+.skyline img{width:100%;height:100%;object-fit:cover}
+.skyline::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(13,26,36,.55))}
+.stamp{position:absolute;left:-58px;bottom:70px;width:178px;height:178px;border-radius:50%;background:var(--blue);color:#fff;display:grid;place-items:center;text-align:center;padding:26px;font-weight:800;font-stretch:80%;font-size:1.02rem;line-height:1.1;text-transform:uppercase;transform:rotate(-9deg);box-shadow:0 20px 40px rgba(0,0,0,.35);z-index:2}
+.stamp small{display:block;font-family:var(--mono);font-size:.55rem;letter-spacing:.18em;font-weight:400;margin-top:8px;opacity:.85}
+.floorline{position:absolute;right:22px;top:16%;writing-mode:vertical-rl;color:rgba(255,255,255,.85);z-index:2}
+
+/* ---------- directory ---------- */
+.onestop{padding:130px 0 120px;background:var(--paper)}
+.os-grid{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:70px;align-items:start}
+.os-head{position:sticky;top:120px}
+.kicker{color:var(--blue-d);margin-bottom:18px;display:block}
+.h2{font-size:clamp(2.2rem,4.2vw,3.6rem);line-height:.98;font-weight:800;font-stretch:78%;text-transform:uppercase;letter-spacing:-.005em}
+.h2 em{font-style:normal;color:var(--blue)}
+.os-head p{margin-top:24px;font-size:1.12rem;color:var(--steel);max-width:420px}
+.preview{margin-top:36px;position:relative;aspect-ratio:4/3;overflow:hidden;background:var(--ink)}
+.preview img{width:100%;height:100%;object-fit:cover;transition:opacity .35s}
+.preview .cap{position:absolute;left:0;bottom:0;background:var(--ink);color:#fff;padding:10px 16px}
+.board{background:var(--ink);color:#fff;padding:34px 34px 20px;position:relative;box-shadow:0 30px 60px -30px rgba(13,26,36,.6)}
+.board-top{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(255,255,255,.12);padding-bottom:20px;margin-bottom:8px;color:#8DA2B1}
+.lcd{font-family:var(--mono);font-weight:600;font-size:2.2rem;color:var(--blue);background:#07111A;border:1px solid #20384C;padding:2px 16px;min-width:76px;text-align:center;text-shadow:0 0 14px rgba(37,169,224,.7)}
+.floor{display:grid;grid-template-columns:62px 1fr auto;align-items:center;gap:18px;padding:22px 6px;border-bottom:1px dashed rgba(255,255,255,.14);cursor:pointer;transition:background .25s,padding .25s}
+.floor:last-child{border-bottom:0}
+.floor .num{white-space:nowrap;font-family:var(--mono);color:#5F7A8D;font-size:.95rem}
+.floor .name{font-size:clamp(1.25rem,2vw,1.65rem);font-weight:700;font-stretch:85%;text-transform:uppercase;letter-spacing:.01em}
+.floor .go{width:40px;height:40px;border:1px solid rgba(255,255,255,.2);border-radius:50%;display:grid;place-items:center;transition:all .25s}
+.floor .go svg{width:16px;height:16px}
+.floor:hover,.floor.active{background:rgba(37,169,224,.1);padding-left:16px}
+.floor:hover .num,.floor.active .num{color:var(--blue)}
+.floor:hover .go,.floor.active .go{background:var(--blue);border-color:var(--blue);transform:rotate(-45deg)}
+.board-foot{display:flex;justify-content:space-between;align-items:center;margin-top:14px;padding-top:18px;border-top:1px solid rgba(255,255,255,.12);color:#8DA2B1;gap:16px;flex-wrap:wrap}
+.board-foot a{color:var(--blue)}
+
+/* ---------- proven ---------- */
+.proven{position:relative;color:#fff;padding:0;background:var(--ink)}
+.proven-bg{position:absolute;inset:0}
+.proven-bg img{width:100%;height:100%;object-fit:cover}
+.proven-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(13,26,36,.92) 30%,rgba(13,26,36,.35))}
+.proven .wrap{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);min-height:640px;align-items:center;gap:60px;padding:110px 0}
+.big-word{font-size:clamp(4.2rem,10.5vw,9.4rem);letter-spacing:-.02em;line-height:.8;font-weight:900;font-stretch:62%;text-transform:uppercase;color:transparent;-webkit-text-stroke:2px rgba(255,255,255,.75)}
+.big-word span{color:var(--blue);-webkit-text-stroke:0}
+.proven p.statement{font-size:clamp(1.25rem,2vw,1.6rem);line-height:1.4;font-weight:400;margin-bottom:34px}
+.proven p.statement b{font-weight:700;color:var(--blue)}
+.partners{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid rgba(255,255,255,.25)}
+.partners div{padding:20px 14px 0 0}
+.partners div+div{padding-left:16px;border-left:1px solid rgba(255,255,255,.25)}
+.partners .mono{color:var(--blue);display:block;margin-bottom:6px}
+.partners strong{font-weight:700;font-stretch:85%;font-size:1.15rem;text-transform:uppercase;line-height:1.15;display:block}
+
+/* ---------- values ---------- */
+.values{padding:130px 0;background:#fff;position:relative}
+.values::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(37,169,224,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(37,169,224,.07) 1px,transparent 1px);background-size:44px 44px;pointer-events:none}
+.values .wrap{position:relative}
+.val-head{display:flex;justify-content:space-between;align-items:end;gap:40px;margin-bottom:70px;flex-wrap:wrap}
+.val-head p{max-width:380px;color:var(--steel)}
+.val-row{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:0;border:1.5px solid var(--ink)}
+.val{padding:46px 38px 50px;position:relative;background:#fff;transition:background .3s,color .3s}
+.val+.val{border-left:1.5px solid var(--ink)}
+.val:first-child{background:var(--blue);color:#fff}
+.val .ic{width:54px;height:54px;margin-bottom:60px}
+.val .ic svg{width:100%;height:100%;stroke:currentColor;fill:none;stroke-width:1.6}
+.val:not(:first-child) .ic{color:var(--blue)}
+.val .n{position:absolute;top:40px;right:34px;font-family:var(--mono);font-size:.8rem;opacity:.6}
+.val h3{font-size:1.75rem;font-weight:800;font-stretch:80%;text-transform:uppercase;line-height:1;margin-bottom:16px}
+.val p{font-size:1rem;line-height:1.6;opacity:.85}
+.val:not(:first-child):hover{background:var(--ink);color:#fff}
+
+/* ---------- testimonials ---------- */
+.words{padding:130px 0;background:var(--paper)}
+.words-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:28px;margin-top:56px}
+.q{padding:52px 48px;position:relative}
+.q-main{background:var(--ink);color:#fff;grid-row:span 2;display:flex;flex-direction:column;justify-content:space-between}
+.q-mark{font-size:7rem;line-height:.6;font-weight:900;color:var(--blue);height:48px}
+.q-main blockquote{font-size:clamp(1.35rem,2.3vw,1.9rem);line-height:1.35;font-weight:500;margin:28px 0 40px}
+.q-main blockquote b{color:var(--blue);font-weight:700}
+.who{display:flex;align-items:center;gap:14px}
+.who .av{width:48px;height:48px;border-radius:50%;background:var(--blue);display:grid;place-items:center;font-weight:800;color:#fff}
+.who strong{display:block;font-size:1rem}
+.who span{font-size:.85rem;opacity:.65}
+.q-side{background:#fff;border-left:5px solid var(--blue)}
+.q-side blockquote{font-size:1.2rem;line-height:1.45;font-weight:500;margin-bottom:26px}
+.q-punch{background:var(--blue);color:#fff;display:flex;flex-direction:column;justify-content:center}
+.q-punch blockquote{font-size:clamp(1.6rem,2.6vw,2.3rem);font-weight:900;font-stretch:72%;text-transform:uppercase;line-height:1}
+.words-top{display:flex;justify-content:space-between;align-items:end;gap:30px;flex-wrap:wrap}
+.link-arrow{display:inline-flex;gap:10px;align-items:center;font-weight:700;border-bottom:2px solid var(--blue);padding-bottom:4px}
+.link-arrow svg{width:16px;height:16px}
+
+/* ---------- talk / subscribe ---------- */
+.talk{background:var(--ink);color:#fff;display:grid;grid-template-columns:1fr 1fr}
+.talk-call{padding:110px 6vw 110px max(4vw,calc((100vw - 1240px)/2));position:relative;overflow:hidden;border-right:1px solid rgba(255,255,255,.1)}
+.talk-call .h2{color:#fff;max-width:520px}
+.phone-big{display:block;font-family:var(--mono);font-weight:600;font-size:clamp(2rem,4vw,3.4rem);color:var(--blue);margin:34px 0 30px;letter-spacing:-.02em;transition:color .2s}
+.phone-big:hover{color:#fff}
+.talk-sub{padding:110px max(4vw,calc((100vw - 1240px)/2)) 110px 6vw;background:var(--ink-2)}
+.talk-sub h3{font-size:1.9rem;font-weight:800;font-stretch:80%;text-transform:uppercase;margin:0 0 10px}
+.talk-sub p{color:#9FB0BD;margin-bottom:30px}
+.form{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.form label{display:block}
+.form label span{display:block;margin-bottom:8px;color:#8DA2B1}
+.form input{width:100%;background:transparent;border:0;border-bottom:1.5px solid rgba(255,255,255,.3);color:#fff;font:inherit;font-size:1.05rem;padding:10px 0;outline:none;transition:border-color .2s}
+.form input:focus{border-color:var(--blue)}
+.form .full{grid-column:1/-1}
+.form button{grid-column:1/-1;justify-self:start;margin-top:14px;border:0;cursor:pointer;font-family:inherit}
+
+/* ---------- footer ---------- */
+footer{background:#07111A;color:#8DA2B1;padding:80px 0 30px}
+.f-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;padding-bottom:60px;border-bottom:1px solid rgba(255,255,255,.08)}
+.f-grid img{height:78px;width:auto;margin-bottom:20px}
+.f-grid h4{color:#fff;margin-bottom:18px}
+.f-grid ul{list-style:none;display:grid;gap:10px}
+.f-grid a:hover{color:var(--blue)}
+.f-tag{max-width:280px}
+.f-bottom{display:flex;justify-content:space-between;gap:20px;padding-top:26px;font-size:.88rem;flex-wrap:wrap}
+.f-bottom a{color:var(--blue)}
+
+/* ---------- reveal ---------- */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.windows i{transition:none}}
+
+/* ---------- responsive ---------- */
+@media (max-width:1080px){
+  .nav,.head-cta .tel{display:none}
+  .burger{display:block}
+  .nav.open{display:flex;flex-direction:column;position:absolute;top:84px;left:0;right:0;background:var(--ink);padding:24px 4vw;gap:16px;align-items:flex-start}
+  .hero-grid,.os-grid,.proven .wrap{grid-template-columns:1fr}
+  .hero-photo{min-height:440px;margin:0 -4vw}
+  .stamp{left:24px;bottom:24px;width:150px;height:150px;font-size:.9rem}
+  .hero-copy{padding-bottom:20px}
+  .os-head{position:static}
+  .val-row{grid-template-columns:1fr}
+  .val+.val{border-left:0;border-top:1.5px solid var(--ink)}
+  .words-grid{grid-template-columns:1fr}
+  .talk{grid-template-columns:1fr}
+  .talk-call,.talk-sub{padding:80px 4vw}
+  .f-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:620px){
+  .top .wrap{height:72px}.logo img{height:46px}.nav.open{top:72px}
+  .head-cta .btn{display:none}
+  .hero{padding-top:50px}
+  .hero h1 .wow{-webkit-text-stroke:2px var(--blue)}
+  .windows{width:100%;opacity:.3}
+  .board{padding:24px 18px 14px}
+  .floor{grid-template-columns:44px 1fr auto;gap:10px}
+  .partners{grid-template-columns:1fr}
+  .partners div+div{padding-left:0;border-left:0;border-top:1px solid rgba(255,255,255,.25);margin-top:14px}
+  .q{padding:38px 26px}
+  .form{grid-template-columns:1fr}
+  .f-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Max 7 Cleaning & Property Services home"><img src="images/max7-logo.png" alt="Max 7 Cleaning & Property Services Ltd."></a>
+    <nav class="nav" id="nav">
+      <a href="https://max7cleaning.com/our-company/">Our Company</a>
+      <a href="#services">Services</a>
+      <a href="https://max7cleaning.com/property-managers/">Property Managers</a>
+      <a href="#testimonials">Testimonials</a>
+    </nav>
+    <div class="head-cta">
+      <a class="tel" href="tel:4038139589"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>403-813-9589</a>
+      <a class="btn btn-blue" href="https://max7cleaning.com/contact/">Get Started</a>
+      <button class="burger" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('open')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7h18M3 12h18M3 17h18"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+<!-- HERO -->
+<section class="hero">
+  <div class="windows" id="windows" aria-hidden="true"></div>
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <div class="eyebrow mono">Calgary · Cleaning &amp; Property Services</div>
+      <h1>We choose to deliver <span class="wow">WOW!</span></h1>
+      <p class="lead"><b>Commercial Cleaning and Maintenance</b> in Calgary, done right the first time.</p>
+      <div class="hero-actions">
+        <a class="btn btn-blue" href="https://max7cleaning.com/contact/">Get Started <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-line" href="#services">See Our Services</a>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <div class="skyline"><img src="images/hero-condo-lobby.jpg" onerror="this.onerror=null;this.src='images/office-loft.jpg'" alt="Clean, bright commercial interior maintained by Max 7"></div>
+      <div class="stamp">If Max 7 can't clean it, nobody can!<small>— a happy client</small></div>
+      <div class="floorline mono">Floors 01 → 07</div>
+    </div>
+  </div>
+</section>
+
+<!-- ONE STOP / DIRECTORY -->
+<section class="onestop" id="services">
+  <div class="wrap os-grid">
+    <div class="os-head rv">
+      <span class="kicker mono">Building Directory</span>
+      <h2 class="h2">Your One Stop <em>Property Services</em> Company</h2>
+      <p>Max 7 is a high quality professional cleaning and property services provider with a wide variety of services that can be tailored to your needs here in Calgary.</p>
+      <div class="preview"><img id="pv" src="images/service-janitorial.jpg" onerror="this.onerror=null;this.src='images/office-loft.jpg'" alt="Commercial janitorial service"><span class="cap mono" id="pvcap">Floor 07 · Commercial Janitorial</span></div>
+    </div>
+
+    <div class="board rv">
+      <div class="board-top"><span class="mono">Max 7 · Services Directory</span><span class="lcd" id="lcd">07</span></div>
+
+      <a class="floor active" href="https://max7cleaning.com/contact/" data-f="07" data-img="images/service-janitorial.jpg" data-name="Commercial Janitorial"><span class="num">FL 07</span><span class="name">Commercial Janitorial</span><span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+      <a class="floor" href="https://max7cleaning.com/condominium-cleaning/" data-f="06" data-img="images/service-condo-common.jpg" data-name="Condominium Common Areas"><span class="num">FL 06</span><span class="name">Condominium Common Areas</span><span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+      <a class="floor" href="https://max7cleaning.com/contact/" data-f="05" data-img="images/service-carpet.jpg" data-name="Carpet Cleaning"><span class="num">FL 05</span><span class="name">Carpet Cleaning</span><span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+      <a class="floor" href="https://max7cleaning.com/contact/" data-f="04" data-img="images/service-floor.jpg" data-name="Floor Care"><span class="num">FL 04</span><span class="name">Floor Care</span><span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+      <a class="floor" href="https://max7cleaning.com/contact/" data-f="03" data-img="images/service-parkade.jpg" data-name="Parkade Cleaning"><span class="num">FL 03</span><span class="name">Parkade Cleaning</span><span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+      <a class="floor" href="https://max7cleaning.com/property-maintenance/" data-f="02" data-img="images/service-property-maintenance.jpg" data-name="Property Maintenance"><span class="num">FL 02</span><span class="name">Property Maintenance</span><span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+      <a class="floor" href="https://max7cleaning.com/junk-removal/" data-f="01" data-img="images/service-junk-removal.jpg" data-name="Junk Removal"><span class="num">FL 01</span><span class="name">Junk Removal</span><span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+
+      <div class="board-foot"><span class="mono">Tailored to your building</span><a class="mono" href="https://max7cleaning.com/contact/">Get Started →</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROVEN -->
+<section class="proven">
+  <div class="proven-bg"><img src="images/boardroom.jpg" alt=""></div>
+  <div class="wrap">
+    <div class="big-word rv">Prov<span>en</span></div>
+    <div class="rv">
+      <p class="statement">Max 7 is passionate about creating <b>long term partnerships</b> with Property Managers, building administrators and Boards of Directors to deliver high quality, reliable service in Calgary that will <b>maximize the value of your property.</b></p>
+      <div class="partners">
+        <div><span class="mono">01</span><strong>Property Managers</strong></div>
+        <div><span class="mono">02</span><strong>Building Administrators</strong></div>
+        <div><span class="mono">03</span><strong>Boards of Directors</strong></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VALUES -->
+<section class="values">
+  <div class="wrap">
+    <div class="val-head rv">
+      <div><span class="kicker mono">Our Company</span><h2 class="h2">What we <em>build on</em></h2></div>
+      <p>We seek to build trust with our valued clients.</p>
+    </div>
+    <div class="val-row rv">
+      <article class="val">
+        <span class="n">/01</span>
+        <div class="ic"><svg viewBox="0 0 48 48"><path d="M8 26c0-9 7-16 16-16s16 7 16 16"/><rect x="4" y="26" width="8" height="12" rx="2"/><rect x="36" y="26" width="8" height="12" rx="2"/><path d="M40 38c0 4-5 6-12 6"/><circle cx="26" cy="44" r="2"/></svg></div>
+        <h3>Customer Service</h3>
+        <p>Our expertise is based on quality customer service, honesty, innovation and getting things done right the first time.</p>
+      </article>
+      <article class="val">
+        <span class="n">/02</span>
+        <div class="ic"><svg viewBox="0 0 48 48"><path d="M6 42V22l10-8 10 8v20"/><path d="M26 42V12l8-6 8 6v30"/><path d="M2 42h44"/><path d="M12 30h8M12 36h8M31 18h6M31 24h6M31 30h6"/></svg></div>
+        <h3>Making a Difference</h3>
+        <p>We strive to make a difference in our community and aim to build partnerships based on mutual respect.</p>
+      </article>
+      <article class="val">
+        <span class="n">/03</span>
+        <div class="ic"><svg viewBox="0 0 48 48"><path d="M6 42h36"/><rect x="9" y="30" width="6" height="12"/><rect x="21" y="22" width="6" height="20"/><rect x="33" y="12" width="6" height="30"/><path d="M8 20 20 10l8 5 14-11"/><path d="M34 4h8v8"/></svg></div>
+        <h3>Growth</h3>
+        <p>We are constantly working to establish ourselves as the most respected and sought after contract cleaning and property service in Calgary.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="words" id="testimonials">
+  <div class="wrap">
+    <div class="words-top rv">
+      <div><span class="kicker mono">Testimonials</span><h2 class="h2">Heard in the <em>boardroom</em></h2></div>
+      <a class="link-arrow" href="https://max7cleaning.com/testimonials/">Read all testimonials <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+    <div class="words-grid">
+      <figure class="q q-main rv">
+        <div class="q-mark">“</div>
+        <blockquote>Strong points in Max 7's services were <b>reliability and quality.</b> The actual service carried out was performed with care and time. All areas were cleaned, Bill took no short cuts. The results were very satisfactory.</blockquote>
+        <figcaption class="who"><span class="av">G</span><div><strong>Glen E</strong><span>Condo Board Member</span></div></figcaption>
+      </figure>
+      <figure class="q q-side rv">
+        <blockquote>“There is no one I know with more integrity than Bill Fuchs. We are lucky to have him as one of our contractors.”</blockquote>
+        <figcaption class="who"><span class="av">C</span><div><strong>Condo Board</strong><span>Calgary, AB</span></div></figcaption>
+      </figure>
+      <figure class="q q-punch rv">
+        <blockquote>“If Max 7 can't clean it, nobody can!”</blockquote>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- TALK + SUBSCRIBE -->
+<section class="talk" id="contact">
+  <div class="talk-call rv">
+    <span class="kicker mono" style="color:var(--blue)">Get Started</span>
+    <h2 class="h2">Would you rather talk to us?</h2>
+    <a class="phone-big" href="tel:4038139589">403-813-9589</a>
+    <a class="btn btn-blue" href="https://max7cleaning.com/contact/">Contact Max 7 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+  </div>
+  <div class="talk-sub rv">
+    <span class="kicker mono" style="color:var(--blue)">Mailing List</span>
+    <h3>Stay in the loop</h3>
+    <p>Join the Max 7 mailing list.</p>
+    <form class="form" onsubmit="event.preventDefault();this.querySelector('button').textContent='Thanks, you\'re on the list';">
+      <label><span class="mono">First Name</span><input type="text" name="fname" required></label>
+      <label><span class="mono">Last Name</span><input type="text" name="lname" required></label>
+      <label class="full"><span class="mono">Email</span><input type="email" name="email" required></label>
+      <button class="btn btn-blue" type="submit">Subscribe</button>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <div><img src="images/max7-logo.png" alt="Max 7 Cleaning & Property Services Ltd."><p class="f-tag">We choose to deliver WOW! Commercial cleaning and property services in Calgary.</p></div>
+      <div><h4 class="mono">Company</h4><ul><li><a href="https://max7cleaning.com/our-company/">Our Company</a></li><li><a href="https://max7cleaning.com/testimonials/">Testimonials</a></li><li><a href="https://max7cleaning.com/property-managers/">Property Managers</a></li><li><a href="https://max7cleaning.com/contact/">Get Started</a></li></ul></div>
+      <div><h4 class="mono">Services</h4><ul><li><a href="https://max7cleaning.com/condominium-cleaning/">Condominium Cleaning</a></li><li><a href="https://max7cleaning.com/property-maintenance/">Property Maintenance</a></li><li><a href="https://max7cleaning.com/junk-removal/">Junk Removal</a></li></ul></div>
+      <div><h4 class="mono">Call Us</h4><ul><li><a href="tel:4038139589" style="color:#fff;font-family:var(--mono);font-size:1.1rem">403-813-9589</a></li><li>Calgary, Alberta</li></ul></div>
+    </div>
+    <div class="f-bottom">
+      <span>Copyright © <span id="yr"></span> Max7 Cleaning. All rights reserved.</span>
+      <span>Design by <a href="https://cleanningdigital.com/" target="_blank" rel="noopener">Cleaning Digital</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+// lit windows (echoes the logo skyline)
+(function(){const w=document.getElementById('windows');const n=14*9;for(let i=0;i<n;i++)w.appendChild(document.createElement('i'));const c=w.children;
+for(let i=0;i<14;i++)c[Math.floor(Math.random()*n)].classList.add('on');
+if(!matchMedia('(prefers-reduced-motion: reduce)').matches)setInterval(()=>{c[Math.floor(Math.random()*n)].classList.toggle('on')},420);})();
+// elevator directory
+(function(){const pv=document.getElementById('pv'),cap=document.getElementById('pvcap'),lcd=document.getElementById('lcd');
+document.querySelectorAll('.floor').forEach(f=>f.addEventListener('mouseenter',()=>{
+  document.querySelectorAll('.floor').forEach(x=>x.classList.remove('active'));f.classList.add('active');
+  lcd.textContent=f.dataset.f;cap.textContent='Floor '+f.dataset.f+' · '+f.dataset.name;
+  pv.style.opacity=0;setTimeout(()=>{pv.onerror=function(){this.onerror=null;this.src='images/office-loft.jpg'};pv.src=f.dataset.img;pv.alt=f.dataset.name;pv.style.opacity=1},200);
+}));})();
+// reveal
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
