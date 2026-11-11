@@ -66,7 +66,6 @@ a{color:inherit;text-decoration:none}
 .skyline::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(13,26,36,.55))}
 .stamp{position:absolute;left:-58px;bottom:70px;width:178px;height:178px;border-radius:50%;background:var(--blue);color:#fff;display:grid;place-items:center;text-align:center;padding:26px;font-weight:800;font-stretch:80%;font-size:1.02rem;line-height:1.1;text-transform:uppercase;transform:rotate(-9deg);box-shadow:0 20px 40px rgba(0,0,0,.35);z-index:2}
 .stamp small{display:block;font-family:var(--mono);font-size:.55rem;letter-spacing:.18em;font-weight:400;margin-top:8px;opacity:.85}
-.floorline{position:absolute;right:22px;top:16%;writing-mode:vertical-rl;color:rgba(255,255,255,.85);z-index:2}
 
 /* ---------- directory ---------- */
 .onestop{padding:130px 0 120px;background:var(--paper)}
@@ -176,6 +175,40 @@ footer{background:#07111A;color:#8DA2B1;padding:80px 0 30px}
 .f-bottom{display:flex;justify-content:space-between;gap:20px;padding-top:26px;font-size:.88rem;flex-wrap:wrap}
 .f-bottom a{color:var(--blue)}
 
+
+/* interactive hero */
+.windows{pointer-events:none}
+.windows i.near{background:rgba(37,169,224,.28);border-color:rgba(37,169,224,.8);transition:background .15s,border-color .15s}
+.hero h1 .wow{cursor:default;background:linear-gradient(90deg,var(--blue) 50%,transparent 50%) right/200% 100% no-repeat;-webkit-background-clip:text;background-clip:text;transition:background-position .6s cubic-bezier(.7,0,.2,1)}
+.hero h1 .wow:hover,.hero h1 .wow.fill{background-position:left}
+.hero-photo{perspective:1200px}
+.skyline{transition:transform .5s ease-out;transform-style:preserve-3d}
+.slide{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.06);transition:opacity .8s ease,transform 6s ease}
+.slide.on{opacity:1;transform:scale(1)}
+.slide-label{position:absolute;left:28px;bottom:26px;z-index:3;color:#fff;max-width:70%}
+.slide-label .mono{color:var(--blue);display:block;margin-bottom:6px}
+.slide-label strong{font-size:1.5rem;font-weight:800;font-stretch:80%;text-transform:uppercase;line-height:1.05;display:block;text-shadow:0 2px 14px rgba(0,0,0,.5)}
+.skyline::after{background:linear-gradient(180deg,transparent 45%,rgba(13,26,36,.8))!important;z-index:2}
+.stamp{left:-58px;bottom:auto;top:24%;transition:transform .2s linear;cursor:pointer}
+.stamp:hover{background:#fff;color:var(--ink)}
+.elevator{position:absolute;right:-26px;top:22%;z-index:4;background:#0A151E;border:1px solid #23394C;padding:12px 10px;display:flex;flex-direction:column;gap:8px;align-items:center;box-shadow:0 24px 50px rgba(0,0,0,.45);border-radius:4px}
+.ev-lcd{background:#030A10;color:var(--blue);font-size:1.05rem;font-weight:600;letter-spacing:.05em;padding:6px 8px;width:56px;text-align:center;border:1px solid #1B3244;text-shadow:0 0 10px rgba(37,169,224,.8);display:flex;justify-content:center;gap:6px;margin-bottom:4px}
+.ev-btn{width:40px;height:40px;border-radius:50%;border:1.5px solid #3A5568;background:radial-gradient(circle at 35% 30%,#1B2E3D,#0D1A24);color:#9FB4C3;font-family:var(--mono);font-weight:600;font-size:.9rem;cursor:pointer;transition:all .2s}
+.ev-btn:hover{border-color:var(--blue);color:#fff}
+.ev-btn.on{border-color:var(--blue);color:#fff;box-shadow:0 0 0 3px rgba(37,169,224,.25),0 0 18px rgba(37,169,224,.7);background:radial-gradient(circle at 35% 30%,#3BB8EC,var(--blue-d))}
+.ride{margin-top:26px;color:#7F96A6;display:flex;align-items:center;gap:10px}
+.ride span{width:8px;height:8px;border-radius:50%;background:var(--blue);box-shadow:0 0 0 0 rgba(37,169,224,.7);animation:ping 1.8s infinite}
+@keyframes ping{70%{box-shadow:0 0 0 10px rgba(37,169,224,0)}100%{box-shadow:0 0 0 0 rgba(37,169,224,0)}}
+@media (max-width:1080px){
+  .elevator{right:12px;top:auto;bottom:16px;flex-direction:row;flex-wrap:nowrap;padding:8px;gap:5px}
+  .ev-lcd{display:none}
+  .ev-btn{width:32px;height:32px;font-size:.78rem}
+  .slide-label{bottom:72px;top:auto;left:20px}
+  .stamp{top:auto;bottom:auto;left:auto;right:18px;top:12%}
+}
+@media (max-width:620px){.ev-btn{width:28px;height:28px}.stamp{width:118px;height:118px;font-size:.72rem;padding:16px}.slide-label strong{font-size:1.15rem}}
+@media (prefers-reduced-motion:reduce){.slide{transition:opacity .2s}.ride span{animation:none}}
+
 /* ---------- reveal ---------- */
 .rv{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease}
 .rv.in{opacity:1;transform:none}
@@ -188,7 +221,7 @@ footer{background:#07111A;color:#8DA2B1;padding:80px 0 30px}
   .nav.open{display:flex;flex-direction:column;position:absolute;top:84px;left:0;right:0;background:var(--ink);padding:24px 4vw;gap:16px;align-items:flex-start}
   .hero-grid,.os-grid,.proven .wrap{grid-template-columns:1fr}
   .hero-photo{min-height:440px;margin:0 -4vw}
-  .stamp{left:24px;bottom:24px;width:150px;height:150px;font-size:.9rem}
+  .stamp{left:auto;right:16px;top:9%;bottom:auto;width:140px;height:140px;font-size:.85rem}
   .hero-copy{padding-bottom:20px}
   .os-head{position:static}
   .val-row{grid-template-columns:1fr}
@@ -246,11 +279,32 @@ footer{background:#07111A;color:#8DA2B1;padding:80px 0 30px}
         <a class="btn btn-blue" href="https://max7cleaning.com/contact/">Get Started <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         <a class="btn btn-line" href="#services">See Our Services</a>
       </div>
+      <p class="ride mono"><span></span>Take the elevator · press a floor to tour our services</p>
     </div>
-    <div class="hero-photo">
-      <div class="skyline"><img src="images/hero-condo-lobby.jpg" onerror="this.onerror=null;this.src='images/office-loft.jpg'" alt="Clean, bright commercial interior maintained by Max 7"></div>
-      <div class="stamp">If Max 7 can't clean it, nobody can!<small>— a happy client</small></div>
-      <div class="floorline mono">Floors 01 → 07</div>
+    <div class="hero-photo" id="heroPhoto">
+      <div class="skyline" id="sky">
+        <img class="slide on" src="images/hero-condo-lobby.jpg" alt="Spotless condominium lobby in Calgary">
+        <img class="slide" src="images/service-janitorial.jpg" alt="Commercial office cleaned after hours" loading="lazy">
+        <img class="slide" src="images/service-condo-common.jpg" alt="Condominium hallway carpet being vacuumed" loading="lazy">
+        <img class="slide" src="images/service-carpet.jpg" alt="Commercial carpet extraction cleaning" loading="lazy">
+        <img class="slide" src="images/service-floor.jpg" alt="Lobby floor being machine scrubbed" loading="lazy">
+        <img class="slide" src="images/service-parkade.jpg" alt="Freshly washed underground parkade" loading="lazy">
+        <img class="slide" src="images/service-property-maintenance.jpg" alt="Property maintenance at a condo entrance" loading="lazy">
+        <img class="slide" src="images/service-junk-removal.jpg" alt="Junk removal at a commercial loading dock" loading="lazy">
+        <div class="slide-label"><span class="mono" id="slideFl">Lobby</span><strong id="slideName">Welcome to Max 7</strong></div>
+      </div>
+      <div class="stamp" id="stamp">If Max 7 can't clean it, nobody can!<small>— a happy client</small></div>
+      <div class="elevator" role="tablist" aria-label="Browse Max 7 services">
+        <div class="ev-lcd mono"><span id="evArrow">▲</span><span id="evNum">L</span></div>
+        <button class="ev-btn" data-i="7" data-fl="07" data-name="Junk Removal">7</button>
+        <button class="ev-btn" data-i="6" data-fl="06" data-name="Property Maintenance">6</button>
+        <button class="ev-btn" data-i="5" data-fl="05" data-name="Parkade Cleaning">5</button>
+        <button class="ev-btn" data-i="4" data-fl="04" data-name="Floor Care">4</button>
+        <button class="ev-btn" data-i="3" data-fl="03" data-name="Carpet Cleaning">3</button>
+        <button class="ev-btn" data-i="2" data-fl="02" data-name="Condominium Common Areas">2</button>
+        <button class="ev-btn" data-i="1" data-fl="01" data-name="Commercial Janitorial">1</button>
+        <button class="ev-btn on" data-i="0" data-fl="L" data-name="Welcome to Max 7">L</button>
+      </div>
     </div>
   </div>
 </section>
@@ -394,6 +448,37 @@ document.getElementById('yr').textContent=new Date().getFullYear();
 (function(){const w=document.getElementById('windows');const n=14*9;for(let i=0;i<n;i++)w.appendChild(document.createElement('i'));const c=w.children;
 for(let i=0;i<14;i++)c[Math.floor(Math.random()*n)].classList.add('on');
 if(!matchMedia('(prefers-reduced-motion: reduce)').matches)setInterval(()=>{c[Math.floor(Math.random()*n)].classList.toggle('on')},420);})();
+// interactive hero: elevator tour
+(function(){
+  const slides=[...document.querySelectorAll('#sky .slide')],btns=[...document.querySelectorAll('.ev-btn')];
+  const num=document.getElementById('evNum'),arrow=document.getElementById('evArrow'),fl=document.getElementById('slideFl'),nm=document.getElementById('slideName');
+  let cur=0,timer=null,auto=null;
+  function go(i){
+    if(i===cur)return;const b=btns.find(x=>+x.dataset.i===i);
+    btns.forEach(x=>x.classList.remove('on'));b.classList.add('on');
+    arrow.textContent=i>cur?'▲':'▼';clearInterval(timer);
+    let n=cur;timer=setInterval(()=>{n+=i>n?1:-1;num.textContent=n===0?'L':n;if(n===i){clearInterval(timer);arrow.textContent='•'}},90);
+    slides[cur].classList.remove('on');slides[i].classList.add('on');
+    fl.textContent=i===0?'Lobby':'Floor '+b.dataset.fl;nm.textContent=b.dataset.name;cur=i;
+  }
+  btns.forEach(b=>b.addEventListener('click',()=>{clearInterval(auto);go(+b.dataset.i)}));
+  const order=[1,2,3,4,5,6,7,0];let k=0;
+  if(!matchMedia('(prefers-reduced-motion: reduce)').matches)auto=setInterval(()=>{go(order[k%8]);k++},3800);
+  document.getElementById('stamp').addEventListener('click',()=>{clearInterval(auto);go(cur===7?0:cur+1)});
+  // windows light up around the cursor
+  const hero=document.querySelector('.hero'),cells=[...document.querySelectorAll('#windows i')];
+  hero.addEventListener('mousemove',e=>{
+    cells.forEach(c=>{const r=c.getBoundingClientRect(),dx=r.left+r.width/2-e.clientX,dy=r.top+r.height/2-e.clientY;c.classList.toggle('near',dx*dx+dy*dy<9000)});
+    const ph=document.getElementById('heroPhoto').getBoundingClientRect();
+    const rx=((e.clientY-ph.top)/ph.height-.5)*-6,ry=((e.clientX-ph.left)/ph.width-.5)*8;
+    document.getElementById('sky').style.transform=`rotateX(${rx}deg) rotateY(${ry}deg)`;
+  });
+  hero.addEventListener('mouseleave',()=>{cells.forEach(c=>c.classList.remove('near'));document.getElementById('sky').style.transform=''});
+  // stamp spins with scroll, WOW fills on load
+  const st=document.getElementById('stamp');
+  addEventListener('scroll',()=>{st.style.transform=`rotate(${-9+scrollY*.06}deg)`},{passive:true});
+  const w=document.querySelector('.wow');setTimeout(()=>w.classList.add('fill'),700);setTimeout(()=>w.classList.remove('fill'),2300);
+})();
 // elevator directory
 (function(){const pv=document.getElementById('pv'),cap=document.getElementById('pvcap'),lcd=document.getElementById('lcd');
 document.querySelectorAll('.floor').forEach(f=>f.addEventListener('mouseenter',()=>{
